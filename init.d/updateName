@@ -1,0 +1,9 @@
+#!/bin/sh /etc/rc.common
+
+START=10
+
+BIN=/usr/bin/updateName
+
+boot(){
+  $BIN
+}

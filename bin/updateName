@@ -1,0 +1,11 @@
+#!/bin/sh
+
+hostname="NanoBrain"
+timezone="BRT3"
+
+$(uci set system.@system[0].hostname=$hostname)
+$(uci set wireless.@wifi-iface[0].ssid=$hostname)
+
+$(uci set wireless.radio0.disable=0)
+$(uci set system.@system[0].timezone=$timezone)
+$(uci commit)
